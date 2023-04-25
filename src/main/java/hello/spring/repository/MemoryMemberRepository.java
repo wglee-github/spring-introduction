@@ -37,4 +37,14 @@ public class MemoryMemberRepository implements MemberRepository {
 		return new ArrayList<>(store.values());
 	}
 
+	/**
+	 * 메모리 비우기
+	 * null이 되는게 아님. 그냥 값을 비움 -> {}
+	 */
+	public void clearStore() {
+		store.values().stream().forEach(m -> System.out.println("before.member = " + m));
+		store.clear();
+		store.values().stream().forEach(m -> System.out.println("after.member = " + m));
+	}
+	
 }
