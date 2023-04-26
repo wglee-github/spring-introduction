@@ -3,6 +3,9 @@ package hello.spring.service;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import hello.spring.domain.Member;
 import hello.spring.repository.MemberRepository;
 import hello.spring.repository.MemoryMemberRepository;
@@ -13,8 +16,13 @@ import hello.spring.repository.MemoryMemberRepository;
  */
 public class MemberService {
 
-	private final MemberRepository memberRepository = new MemoryMemberRepository();
+	private final MemberRepository memberRepository;
 	
+	@Autowired
+	public MemberService(MemberRepository memberRepository) {
+		this.memberRepository = memberRepository;
+	}
+
 	/**
 	 * 회원가입
 	 */
