@@ -5,6 +5,7 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import hello.spring.domain.Member;
 import hello.spring.repository.MemberRepository;
@@ -14,6 +15,7 @@ import hello.spring.repository.MemoryMemberRepository;
  * 
  * service 는 비지니스 적인 용어를 사용하여 메소드명을 작성한다.
  */
+
 public class MemberService {
 
 	private final MemberRepository memberRepository;
@@ -26,6 +28,7 @@ public class MemberService {
 	/**
 	 * 회원가입
 	 */
+	@Transactional
 	public Long join(Member member) {
 		// 중복 X
 		validateDuplicateMember(member);
