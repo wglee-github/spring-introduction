@@ -1,9 +1,10 @@
-package hello.spring.repository;
+package hello.spring.repository.impl;
 
 import java.util.List;
 import java.util.Optional;
 
 import hello.spring.domain.Member;
+import hello.spring.repository.MemberRepository;
 import jakarta.persistence.EntityManager;
 
 public class JpaMemberRepository implements MemberRepository{

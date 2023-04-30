@@ -1,4 +1,4 @@
-package hello.spring.repository;
+package hello.spring.repository.impl;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -12,13 +12,17 @@ import java.util.Optional;
 import javax.sql.DataSource;
 
 import org.springframework.jdbc.datasource.DataSourceUtils;
-import org.springframework.stereotype.Repository;
 
 import hello.spring.domain.Member;
+import hello.spring.repository.MemberRepository;
 
-@Repository
 public class JdbcMemberRepository implements MemberRepository{
 
+	/**
+	 * DataSource
+	 * - Java에서 제공하는 DB와의 컨넥션을 관리하는 인터페이스이다.
+	 * - DB 연결 정보를 저장하고, Connection을 생성하고, Connection Pool에 등록하고, 관리하는 역할을 담당한다.
+	 */
 	private final DataSource dataSource;
 	
 	public JdbcMemberRepository(DataSource dataSource) {

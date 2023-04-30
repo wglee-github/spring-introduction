@@ -1,7 +1,5 @@
-package hello.spring.repository;
+package hello.spring.repository.impl;
 
-import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -10,12 +8,12 @@ import java.util.Optional;
 import javax.sql.DataSource;
 
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.core.RowCallbackHandler;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.simple.SimpleJdbcInsert;
 
 import hello.spring.domain.Member;
+import hello.spring.repository.MemberRepository;
 
 public class JdbcTemplateMemberRepository implements MemberRepository{
 

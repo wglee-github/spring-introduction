@@ -8,7 +8,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import hello.spring.domain.Member;
-import hello.spring.repository.MemoryMemberRepository;
+import hello.spring.repository.impl.MemoryMemberRepository;
 
 class MemberServiceTest {
 

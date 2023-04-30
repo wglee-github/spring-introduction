@@ -10,6 +10,7 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 
 import hello.spring.domain.Member;
+import hello.spring.repository.impl.MemoryMemberRepository;
 
 class MemoryMemberRepositoryTest {
 
